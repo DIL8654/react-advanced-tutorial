@@ -1,7 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const UseStateCounter = () => {
-  return <h2>useState counter example</h2>;
+  const [value, setValue] = useState(0);
+
+  const decreseHandler = (value) => {
+    setValue(value - 1);
+  };
+
+  const resetHandler = (value) => {
+    setValue(0);
+  };
+
+  const increaseHandler = (value) => {
+    setValue(value + 1);
+  };
+  return (
+    <>
+      <section style={{ margin: "4 rem 0" }}>
+        <h2> regular counter</h2>
+        <h1>{value}</h1>
+        <button className="btn" onClick={() => decreseHandler(value)}>
+          {" "}
+          decrease
+        </button>
+        <button className="btn" onClick={() => resetHandler(value)}>
+          {" "}
+          reset
+        </button>
+        <button className="btn" onClick={() => increaseHandler(value)}>
+          {" "}
+          increase
+        </button>
+      </section>
+    </>
+  );
 };
 
 export default UseStateCounter;
