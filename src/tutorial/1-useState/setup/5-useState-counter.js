@@ -16,7 +16,9 @@ const UseStateCounter = () => {
   };
   const complexValueHandler = () => {
     setTimeout(() => {
-      setValue(value + 1);
+      setValue((prevState) => {
+        return prevState + 1;
+      });
     }, 2000);
   };
   return (
