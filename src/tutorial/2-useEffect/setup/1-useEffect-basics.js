@@ -10,7 +10,7 @@ const UseEffectBasics = () => {
     if (value > 0) {
       document.title = `New messages(${value})`;
     }
-  });
+  }, [value]); // blank array means only re-render in initial run and having value means ore-render when values in array changes
 
   console.log("render component");
   return (
