@@ -12,6 +12,11 @@ const UseEffectBasics = () => {
     }
   }, [value]); // blank array means only re-render in initial run and having value means ore-render when values in array changes
 
+  //
+  useEffect(() => {
+    console.log("initial run");
+  }, []);
+
   console.log("render component");
   return (
     <>
