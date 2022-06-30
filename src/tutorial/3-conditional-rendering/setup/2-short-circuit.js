@@ -15,6 +15,8 @@ const ShortCircuit = () => {
       {/* <h1>{firstValue}</h1>
       <h1>value : {secondValue}</h1> */}
       <h1>{text || "John doe"}</h1>
+      {text && <h1>Hello world</h1>}
+      {!text && <h1>Hello world</h1>}
     </>
   );
 };
