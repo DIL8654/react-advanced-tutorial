@@ -12,7 +12,12 @@ const UseRefBasics = () => {
     console.log(refContainer.current.value);
     console.log(divContainer.current.value);
   };
-  console.log(refContainer);
+
+  useEffect(() => {
+    refContainer.current.focus();
+    console.log(refContainer.current);
+  });
+
   return (
     <>
       <form className="form" onSubmit={handleSubmit}>
